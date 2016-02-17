@@ -3,13 +3,13 @@ import pocketsphinx as ps
 import sphinxbase
 import sys
 import os
-import pyaudio
-import wave
+#import pyaudio
+#import wave
 from pprint import pprint
-from spyrk import spark_cloud
+#from spyrk import spark_cloud
 
 
-spark = spark_cloud.SparkCloud('kurohai@gmail.com', 'inherent')
+#spark = spark_cloud.SparkCloud('kurohai@gmail.com', 'inherent')
 
 
 def decodeSpeech(wavfile, speechRec):
@@ -26,6 +26,7 @@ def decodeSpeech(wavfile, speechRec):
             break
 
     speechRec.end_utt()
+    print ('Best hypothesis segments: ', [seg.word for seg in speechRec.seg()])
     r = speechRec.hyp()
     if r:
         return r.hypstr

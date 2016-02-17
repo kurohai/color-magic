@@ -1,0 +1,7 @@
+*.db
+*.py[cod]
+*.log
+log/
+*.sublime-*
+apriori/
+stash/

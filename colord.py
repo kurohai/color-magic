@@ -23,7 +23,7 @@ config = Decoder.default_config()
 # copy pasta config
 MODELDIR = '/usr/local/share/pocketsphinx/model/'
 config.set_string('-hmm', os.path.join(MODELDIR, 'en-us/en-us'))
-config.set_string('-lm', os.path.join(MODELDIR, 'en-us/en-us.lm.bin'))
+config.set_string('-lm', os.path.join(MODELDIR, 'en-us/en-us-phone.lm.bin'))
 config.set_string('-dict', os.path.join(MODELDIR, 'en-us/cmudict-en-us.dict'))
 
 
